@@ -1,0 +1,25 @@
+{
+  "name": "Enhanced Steam Workshop Image Gallery",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "Keyboard support for Steam workshop image galleries.",
+  "homepage_url": "https://github.com/jdpnielsen/enhanced-steam-image-gallery",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "permissions": [
+    "*://steamcommunity.com/sharedfiles/filedetails/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://steamcommunity.com/sharedfiles/filedetails/*"
+      ],
+      "js": [
+        "src/inject/inject.js"
+      ]
+    }
+  ]
+}
